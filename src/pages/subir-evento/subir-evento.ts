@@ -17,7 +17,7 @@ export class SubirEventoPage {
   imagen:string = "";
   imgPrev:string = "";
   fecha_actual:string = "";
-  hora_actual:string = "";
+  hora_actual:string = ""; 
   lista_tipos_evento: any = LISTA_TIPOS_EVENTO;
 
   fecha_seleccionada: string = "";
