@@ -1,0 +1,38 @@
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <button ion-button block outline (click)="logueo_comun()" class="boton_logeo_normal">Entrar</button>
+
+    <button ion-button block icon-start color="danger" (click)="logueo_googleplus()" class="botones_login">
+      <ion-icon name="logo-googleplus"></ion-icon>
+      Sign In With Google+
+    </button>
+
+    <button ion-button block icon-start color="primary" (click)="logueo_facebook()" class="botones_login">
+      <ion-icon name="logo-facebook"></ion-icon>
+      Sign In With Facebook
+    </button>
+
+    <button ion-button block icon-start color="twitter_color" (click)="logueo_twitter()" class="botones_login">
+      <ion-icon name="logo-twitter"></ion-icon>
+      Sign In With Twitter
+    </button>
+
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <button ion-button block color="secondary">
+    ¡Quiero registrarme!
+  </button>
+</ion-footer>

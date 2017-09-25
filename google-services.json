@@ -1,0 +1,66 @@
+{
+  "project_info": {
+    "project_number": "700202952246",
+    "firebase_url": "https://smash-177909.firebaseio.com",
+    "project_id": "smash-177909",
+    "storage_bucket": "smash-177909.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700202952246:android:9c2c52363d020aba",
+        "android_client_info": {
+          "package_name": "com.geniuspacs.Smash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700202952246-9e7dkeil413jrtpce8td1klievejtl0h.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "700202952246-3gguq5sn5946t0hj9vq2l41aiel5cp3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geniuspacs.Smash",
+            "certificate_hash": "c1a0f4f1c1ff0cb860a2c6ef86f7116f612cd803"
+          }
+        },
+        {
+          "client_id": "700202952246-m8c4q3umhk259cuqjl7hsj7mm5j8195c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjDgF-FFFRdkoswOPKt4mIRS1jRcZIQtE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700202952246-9e7dkeil413jrtpce8td1klievejtl0h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "700202952246-231m48ramv1991s0b63222a20setoudm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.geniuspacs.Smash"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

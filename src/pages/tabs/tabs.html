@@ -1,0 +1,5 @@
+<ion-tabs>
+  <ion-tab [root]="tab1Root" tabIcon="home"></ion-tab>
+  <ion-tab tabIcon="camera" (ionSelect)="opcionesSubidaEvento()"></ion-tab>
+  <ion-tab [root]="tab2Root" tabIcon="filing" [tabBadge]="pushProv.solicitudesPendientes"></ion-tab>
+</ion-tabs>

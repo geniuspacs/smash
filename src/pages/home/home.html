@@ -1,14 +1,27 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Smash!
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+
+    <ion-refresher (ionRefresh)="refrescarListaEventos($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+  <ion-card *ngFor="let evento of qdbProv.eventos" >
+    <ion-card-header>
+      <p>{{evento.asistentes}}/{{evento.num_max_asistentes}}</p>
+    </ion-card-header>
+
+    <img src="{{evento.img}}">
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="cargar_siguientes($event)" [enabled]="hayMas">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
 </ion-content>

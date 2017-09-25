@@ -1,0 +1,72 @@
+<ion-header>
+  
+    <ion-navbar>
+  
+      <ion-buttons class="left">
+        <button ion-button (click)="cerrarModal()">
+          Salir
+        </button>
+      </ion-buttons>
+  
+      <ion-title text-center>Smash Upload</ion-title>
+  
+      <ion-buttons class="right">
+        <button ion-button only-icon (click)="subirEvento()" [disabled]="titulo === '' || ubicacion === '' || tipo_evento === ''">
+          <ion-icon name="send"></ion-icon>
+        </button>
+      </ion-buttons>
+  
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content padding>
+  
+    <ion-list>
+      <ion-item>
+        <img [src]="imgPrev" />
+      </ion-item>
+  
+      <ion-item>
+        <ion-input placeholder="Título" type="text" clearInput="true" [(ngModel)]="titulo"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Fecha del evento</ion-label>
+        <ion-datetime displayFormat="DDDD D MMM, YYYY" min="{{fecha_actual}}" max="2037" [(ngModel)]="fecha_seleccionada"></ion-datetime>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Hora del evento</ion-label>
+        <ion-datetime displayFormat="HH:mm" min="{{fecha_actual===fecha_seleccionada ? hora_actual: '00:00'}}" [(ngModel)]="hora_seleccionada"></ion-datetime>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input placeholder="Ubicación del evento" type="text" clearInput="true" [(ngModel)]="ubicacion"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input type="number" placeholder="Nº máximo de invitados" [(ngModel)]="num_max_asistentes"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Público</ion-label>
+        <ion-toggle [(ngModel)]="publico"></ion-toggle>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Tipo de evento</ion-label>
+        <ion-select [(ngModel)]="tipo_evento">
+          <ion-option *ngFor="let tipoEvento of lista_tipos_evento" value="{{tipoEvento.valor}}">
+            {{tipoEvento.valor}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-textarea placeholder="Descripción del evento" [(ngModel)]="descripcion"></ion-textarea>
+      </ion-item>
+  
+    </ion-list>
+  
+  </ion-content>  
